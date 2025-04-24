@@ -1,0 +1,6 @@
+[workspace]
+members = [
+    "*-generated",
+    "detector-generated",
+]
+resolver = "2"

@@ -1,0 +1,42 @@
+name: Build Template
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        template:
+          - detector
+        include:
+          - template: detector
+            project_name: hmt-github-example
+            arguments: "--define=description=example --define=github-username=hummanta --define=language=Rust"
+    env:
+      PROJECT_NAME: ${{ matrix.project_name }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Run cargo generate
+        uses: cargo-generate/cargo-generate-action@v0.23.3
+        with:
+          name: ${{ matrix.project_name }}
+          template: ${{ matrix.template }}
+          arguments: ${{ matrix.arguments }}
+
+      - name: Install Rust toolchain
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Cargo check
+        # we need to move the generated project to a temp folder, away from the template project
+        # otherwise cargo runs would fail
+        # see https://github.com/rust-lang/cargo/issues/9922
+        run: |
+          mv ${{ env.PROJECT_NAME }} ${{ runner.temp }}/
+          cd ${{ runner.temp }}/${{ env.PROJECT_NAME }}
+          cargo check --tests

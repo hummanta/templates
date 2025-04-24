@@ -1,0 +1,8 @@
+[package]
+name = "detector-generated"
+description = "An example generated using the detector template"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+hmt-detection = { git = "https://github.com/hummanta/hummanta.git", tag = "v0.10.3"}
