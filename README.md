@@ -18,7 +18,7 @@ Starter templates for Hummanta specification projects, with predefined structure
 
 3. Choose one of the following templates:
 
-  - `package`: A hummanta specification package, for example, a detector, compiler, or target.
+  - `detector`: A Hummanta-specification-compliant tool for detecting a project's programming language.
 
 ## Contributing
 
