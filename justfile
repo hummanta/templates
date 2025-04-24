@@ -11,4 +11,6 @@ generate-detector:
     rm -rv detector-generated | true
     cargo generate --path ./detector \
         --name detector-generated \
-        --define project-description="An example generated using the detector template"
+        --define description="An example generated using the detector template" \
+        --define github-username="hummanta" \
+        --define language="Rust"
