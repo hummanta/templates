@@ -37,7 +37,7 @@ jobs:
       - name: Install cross-compilation tools
         uses: taiki-e/setup-cross-toolchain-action@v1
         with:
-          target: {% raw %}${{ matrix.os }}{% endraw %}
+          target: {% raw %}${{ matrix.target }}{% endraw %}
 
       - name: Install Just
         uses: taiki-e/install-action@just
@@ -46,22 +46,22 @@ jobs:
         run: just install-hmt-packager
 
       - name: Build all crates
-        run: just build release {% raw %}${{ matrix.os }}{% endraw %}
+        run: just build release {% raw %}${{ matrix.target }}{% endraw %}
 
       - name: Package binaries and checksum
-        run: just package release {% raw %}${{ matrix.os }}{% endraw %} {% raw %}${{ github.ref_name }}{% endraw %}
+        run: just package release {% raw %}${{ matrix.target }}{% endraw %} {% raw %}${{ github.ref_name }}{% endraw %}
 
       - name: Upload package tarballs
         uses: actions/upload-artifact@v4
         with:
-          name: {% raw %}${{ matrix.os }}{% endraw %}-tarballs
+          name: {% raw %}${{ matrix.target }}{% endraw %}-tarballs
           path: target/artifacts/*.tar.gz
           compression-level: 0
 
       - name: Upload checksums
         uses: actions/upload-artifact@v4
         with:
-          name: {% raw %}${{ matrix.os }}{% endraw %}-checksums
+          name: {% raw %}${{ matrix.target }}{% endraw %}-checksums
           path: target/artifacts/*.sha256
           compression-level: 0
 
