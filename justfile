@@ -13,4 +13,4 @@ generate-detector:
         --name detector-generated \
         --define description="An example generated using the detector template" \
         --define github-username="hummanta" \
-        --define language="Rust"
+        --define language="Toy"

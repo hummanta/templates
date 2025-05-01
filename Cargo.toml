@@ -1,6 +1,3 @@
 [workspace]
-members = [
-    "*-generated",
-    "detector-generated",
-]
+members = ["detector-generated"]
 resolver = "2"

@@ -2,7 +2,7 @@ name = "detector-generated"
 homepage = "https://hummanta.github.io/detector-generated"
 repository = "https://github.com/hummanta/detector-generated"
 description = "An example generated using the detector template"
-language = "Rust"
+language = "Toy"
 kind = "detector"
 
 targets = [

@@ -21,7 +21,7 @@ pub struct MyDetector;
 /// An example generated using the detector template
 impl Detector for MyDetector {
     fn detect(&self, _context: &DetectContext) -> DetectResult {
-        DetectResult::pass("Rust".to_string())
+        DetectResult::pass("Toy".to_string())
     }
 }
 

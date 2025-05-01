@@ -52,7 +52,7 @@ This will output a JSON result:
 ```json
 {
   "pass": true,
-  "language": "Rust"
+  "language": "Toy"
 }
 ```
 
