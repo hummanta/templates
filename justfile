@@ -3,6 +3,7 @@ default:
 
 generate-all:
     just generate-detector
+    just generate-frontend
 
 # The purpose of these targets is to make it easy to make changes to the templates and then
 # regenerate the generated projects and view the expected changes in a git diff.
@@ -12,5 +13,13 @@ generate-detector:
     cargo generate --path ./detector \
         --name detector-generated \
         --define description="An example generated using the detector template" \
+        --define github-username="hummanta" \
+        --define language="Toy"
+
+generate-frontend:
+    rm -rv frontend-generated | true
+    cargo generate --path ./frontend \
+        --name frontend-generated \
+        --define description="An example generated using the frontend template" \
         --define github-username="hummanta" \
         --define language="Toy"

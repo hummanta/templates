@@ -12,10 +12,15 @@ jobs:
       matrix:
         template:
           - detector
+          - frontend
         include:
           - template: detector
             project_name: hmt-github-example
-            arguments: "--define=description=example --define=github-username=hummanta --define=language=Rust"
+            arguments: "--define=description=example --define=github-username=hummanta --define=language=Toy"
+          - template: frontend
+            project_name: hmt-github-example
+            arguments: "--define=description=example --define=github-username=hummanta --define=language=Toy"
+
     env:
       PROJECT_NAME: ${{ matrix.project_name }}
     steps:

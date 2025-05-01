@@ -8,7 +8,6 @@ The template will create the following project structure:
 .
 ├── .github               # GitHub-specific configurations, such as workflows.
 ├── CONTRIBUTING.md       # Guidelines for contributing to the project.
-├── Cargo.lock            # Lock file for Cargo, ensuring consistent dependency versions.
 ├── Cargo.toml            # Manifest file for Rust project dependencies and metadata.
 ├── LICENSE               # License file specifying the terms of use for the project.
 ├── README.md             # Main documentation file providing an overview of the project.

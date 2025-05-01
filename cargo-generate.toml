@@ -4,4 +4,5 @@
 cargo_generate_version = ">=0.20.0"
 sub_templates = [
   "detector",
+  "frontend"
 ]

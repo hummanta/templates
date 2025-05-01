@@ -1,3 +1,6 @@
 [workspace]
-members = ["detector-generated"]
+members = [
+    "detector-generated",
+    "frontend-generated",
+]
 resolver = "2"

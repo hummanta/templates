@@ -1,0 +1,9 @@
+# configuration for https://cargo-generate.github.io/cargo-generate/
+
+[template]
+cargo_generate_version = ">=0.20.0"
+
+[placeholders]
+description = { type = "string", prompt = "Short description of the project", default = "An example generated using the frontend template" }
+language = { type = "string", prompt = "What's the language that the frontend wants to parsing", default = "Toy" }
+github-username = { type = "string", prompt = "What's your GitHub username", default = "hummanta" }
