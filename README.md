@@ -18,8 +18,8 @@ Starter templates for Hummanta specification projects, with predefined structure
 
 3. Choose one of the following templates:
 
-  - [`detector`](./detector/README.md): A Hummanta-specification-compliant tool for detecting a project's programming language.
-  - [`frontend`](./frontend/README.md): A Hummanta-specification-compliant tool for parsing the source code and generating the Cranelift IR.
+  - [`detector`](./detector/README.md): Detecting a project's programming language.
+  - [`frontend`](./frontend/README.md): Parsing the source code and generating the Cranelift IR.
 
 ## Contributing
 
