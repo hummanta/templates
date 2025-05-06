@@ -1,0 +1,11 @@
+[package]
+name = "backend-generated"
+description = "An example generated using the backend template"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anyhow = "1.0.98"
+clap = { version = "4.5.37", features = ["derive", "env"] }
+cranelift = { version = "0.119.0", features = ["module", "object", "native"] }
+cranelift-reader = "0.119.0"

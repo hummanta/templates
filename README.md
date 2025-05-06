@@ -20,11 +20,12 @@ Starter templates for Hummanta specification projects, with predefined structure
 
   - [`detector`](./detector/README.md): Detecting a project's programming language.
   - [`frontend`](./frontend/README.md): Parsing the source code and generating the Cranelift IR.
+  - [`backend`](./backend/README.md): Compiling Cranelift IR into target-specific machine code.
 
 ## Contributing
 
 To keep the generated code up to date, install [`just`](https://github.com/casey/just)
-and run `just generate-all` (or a specific template -e.g. `just generate-package`).
+and run `just generate-all` (or a specific template -e.g. `just generate-detector`).
 
 ## License
 

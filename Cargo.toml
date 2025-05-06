@@ -2,5 +2,6 @@
 members = [
     "detector-generated",
     "frontend-generated",
+    "backend-generated",
 ]
 resolver = "2"
