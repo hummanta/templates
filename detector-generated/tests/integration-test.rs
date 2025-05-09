@@ -23,5 +23,7 @@ fn test_detector_binary() {
         .expect("failed to execute process");
 
     let stdout = String::from_utf8(output.stdout).expect("stdout is not valid UTF-8");
-    assert_eq!(stdout, "{\"pass\":true,\"language\":\"Toy\"}\n");
+
+    #[rustfmt::skip]
+    assert_eq!(stdout, "{\"pass\":true,\"language\":\"Toy\",\"extension\":\"toy\"}\n");
 }

@@ -21,7 +21,7 @@ pub struct MyDetector;
 /// {{description}}
 impl Detector for MyDetector {
     fn detect(&self, _context: &DetectContext) -> DetectResult {
-        DetectResult::pass("{{language}}".to_string())
+        DetectResult::pass("{{language}}".to_string(), "{{extension}}".to_string())
     }
 }
 

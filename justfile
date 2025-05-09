@@ -15,7 +15,8 @@ generate-detector:
         --name detector-generated \
         --define description="An example generated using the detector template" \
         --define github-username="hummanta" \
-        --define language="Toy"
+        --define language="Toy" \
+        --define extension="toy"
 
 generate-frontend:
     rm -rv frontend-generated | true
