@@ -46,7 +46,7 @@ Options:
 Example:
 
 ```bash
-frontend-generated --input samples/toy/add.toy --ouput add.clif
+frontend-generated --input samples/Toy/add.toy --ouput add.clif
 ```
 
 ## Development

@@ -24,7 +24,8 @@ generate-frontend:
         --name frontend-generated \
         --define description="An example generated using the frontend template" \
         --define github-username="hummanta" \
-        --define language="Toy"
+        --define language="Toy" \
+        --define extension="toy"
 
 generate-backend:
     rm -rv backend-generated | true

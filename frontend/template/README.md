@@ -46,7 +46,7 @@ Options:
 Example:
 
 ```bash
-{{project-name}} --input samples/toy/add.toy --ouput add.clif
+{{project-name}} --input samples/{{language}}/add.{{extension}} --ouput add.clif
 ```
 
 ## Development
